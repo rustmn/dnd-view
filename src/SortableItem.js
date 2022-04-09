@@ -20,7 +20,7 @@ const SortableItem = (props) => {
     height: "100px",
     border: "2px solid red",
     backgroundColor: "#cccccc",
-    margin: "10px",
+    //margin: "10px",
     zIndex: isDragging ? "100" : "auto",
     opacity: isDragging ? 0.3 : 1,
     display: 'flex',
@@ -38,8 +38,8 @@ const SortableItem = (props) => {
       >
         <div
           style={{
-            minWidth: "30px",
-            minHeight: "20px",
+            minWidth: "15px",
+            minHeight: "15px",
             border: "1px solid balck",
             borderColor: "black",
             display: 'flex',

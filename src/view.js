@@ -1,20 +1,31 @@
 import style from './app.module.scss';
+import Box from './box';
 
 const View = ({
-  items
+  items,
+  box_type,
+  sub,
+  setViewType
 }) => {
+
   return (
-    <div className = { style.view }>
+    <Box
+    type = { box_type }
+    sub = { sub }
+    setViewType = { setViewType }
+    >
       {
         items.map(item => (
-          <div className = { style.view_item }>
+          <div
+          key = { item.value }
+          className = { style.view_item }>
             {
-              item
+              item.value
             }
           </div>
         ))
       }
-    </div>
+    </Box>
   )
 }
 

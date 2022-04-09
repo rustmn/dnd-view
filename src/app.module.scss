@@ -1,7 +1,13 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
 .wrapper {
   width: 100vw;
   height: 100vh;
   display: flex;
+  overflow-x: hidden;
 }
 
 .box {
@@ -10,6 +16,10 @@
   position: relative;
   &:first-child {
     border-right: 1px solid green;
+  }
+  &_panel {
+    width: 30%;
+    margin: 0 auto;
   }
 }
 
@@ -35,9 +45,30 @@
     width: 100px;
     height: 100px;
     background: rgb(204, 204, 204);
-    margin: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
   }
+}
+
+.panel {
+  width: 100%;
+  background: gray;
+  height: 60px;
+  display: flex;
+  &_item {
+    width: 33%;
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &_active {
+      background: green;
+    }
+  }
+}
+
+.divider {
+  margin: 20px 0;
 }
