@@ -108,7 +108,9 @@ function App() {
         setItems = { setBlocks }
         setViewType = { setViewType }
         />
-        <div className = { style.divider }></div>
+        {
+          boxType !== '1' && <div className = { style.divider }></div>
+        }
           <Test
           sub = { true }
           items = { blocks.map(block => ({
